@@ -30,10 +30,6 @@ chmod u+w /opt/LAPS/logs && \
 chmod u+w /opt/LAPS/conf && \
 chmod u+w /opt/LAPS/keystore
 
-#Run install script
-RUN /opt/LAPS/wrapper/bin/installDaemon.sh && \
-systemctl daemon-reload
-
-RUN service laps start
+RUN /opt/LAPS/wrapper/bin/runConsole.sh
 
 EXPOSE 8443
