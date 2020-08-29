@@ -25,9 +25,9 @@ rm -rf temp
 #Set Permissions
 RUN chown laps:laps /opt/LAPS -R && \
 chmod u=rx,g=rx,o-rwx /opt/LAPS -R && \
-chmod u+w /opt/LAPS/wrapper/tmp && \
-chmod u+w /opt/LAPS/logs && \
-chmod u+w /opt/LAPS/conf && \
+chmod u+w /opt/LAPS/wrapper/tmp -R && \
+chmod u+w /opt/LAPS/logs -R && \
+chmod u+w /opt/LAPS/conf -R && \
 chmod u+w /opt/LAPS/keystore
 
 RUN /opt/LAPS/wrapper/bin/runConsole.sh
